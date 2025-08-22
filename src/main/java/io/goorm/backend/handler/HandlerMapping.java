@@ -23,6 +23,9 @@ public class HandlerMapping {
     commandMap.put("fileUpload", new FileUploadCommand());
     commandMap.put("fileDownload", new FileDownloadCommand());
     commandMap.put("fileDelete", new FileDeleteCommand());
+    commandMap.put("mypage", new MypageViewCommand());
+    commandMap.put("mypageUpdate", new MypageUpdateCommand());
+
   }
 
   public Command getCommand(String commandName) {

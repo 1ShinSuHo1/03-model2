@@ -79,4 +79,14 @@ public class UserDAO {
             return null;
         }
     }
+
+    public boolean updateUserProfile(User user, boolean changePassword) {
+        if (changePassword) {
+            String sql = "UPDATE users SET name = ?, email = ?, password = ? WHERE id = ?";
+            return jdbcTemplate.update(sql, user.getName(), user.getEmail(), user.getPassword(), user.getId()) > 0;
+        } else {
+            String sql = "UPDATE users SET name = ?, email = ? WHERE id = ?";
+            return jdbcTemplate.update(sql, user.getName(), user.getEmail(), user.getId()) > 0;
+        }
+    }
 }

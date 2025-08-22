@@ -28,6 +28,10 @@
                            class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md text-sm font-medium">
                             로그아웃
                         </a>
+                        <a href="front?command=mypage"
+                           class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium">
+                            마이페이지
+                        </a>
                     </c:when>
                     <c:otherwise>
                         <!-- 로그인하지 않은 상태 -->
